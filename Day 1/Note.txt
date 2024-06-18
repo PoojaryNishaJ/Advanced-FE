@@ -1,0 +1,4 @@
+Topics covered
+1. Semantic HTML
+2. HTML5 tags
+3. Attributes and data
