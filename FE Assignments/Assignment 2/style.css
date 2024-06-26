@@ -72,6 +72,13 @@ body {
     display: block;
 }
 
+.nav-link:hover {
+    color: #0e5e91;
+}
+
+.submenu-link:hover {
+    color: #0e5e91;
+}
 
 .submenu-item {
     display: block;
@@ -219,12 +226,11 @@ body {
         text-align: left;
         padding: 20px 34px;
         width: 100%;
-        border-bottom: 1px solid #0e5e91;
+        border-bottom: 1px solid #064d79;
     }
 
     .logo-container {
         padding: 19px;
-        margin-right: 200px;
     }
 
     .main-nav .nav-list.active {
@@ -276,28 +282,21 @@ body {
         transition: border-color 0.3s ease;
     }
 
-    .nav-link::after,
-    .nav-link::before {
-        content: '';
-        width: 10px;
-        height: 2px;
-        background-color: #fff;
+    .nav-link::after {
         position: absolute;
-        top: 50%;
-        right: 24px;
-        transform: translate(-50%, -50%);
-        transition: transform 0.3s ease;
+        content: "";
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        padding: 4px;
+        transform: rotate(45deg);
+        display: block;
+        top: 20px;
+        right: 20px;
+        transition: 0.3s;
     }
 
     .nav-link::after {
-        transform-origin: center;
-        transform: rotate(-45deg);
-    }
-
-    .nav-link::before {
-        transform-origin: center;
         transform: rotate(45deg);
-        right: 29px;
     }
 
     .nav-item.active .nav-link {
@@ -320,6 +319,7 @@ body {
     .submenu.active {
         display: block;
         border-bottom: 1px solid #0e5e91;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .nav-item:hover .submenu {
@@ -380,6 +380,10 @@ body {
         left: 0;
         background-color: #0d1137;
         list-style-type: none;
+    }
+
+    .nav-item.active .nav-link::after {
+        transform: rotate(-135deg);
     }
 
     .nav-item.active .submenu {
